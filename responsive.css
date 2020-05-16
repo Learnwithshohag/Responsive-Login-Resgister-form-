@@ -1,0 +1,180 @@
+
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+	.form_box{
+		width: 380px;
+		height: 450px;
+		background-color:#ddd;
+		transform: translate(150% , 35%);
+		position: relative;
+		padding: 5px;
+		overflow: hidden;
+		border-radius: 10px;
+
+	}
+
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	.form_box{
+		width: 380px;
+		height: 450px;
+		background-color:#ddd;
+		transform: translate(80% , 35%);
+		position: relative;
+		padding: 5px;
+		overflow: hidden;
+		border-radius: 10px;
+
+	}
+	
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	.form_box{
+		width: 280px;
+		height: 350px;
+		background-color:#ddd;
+		transform: translate(35% , 50%);
+		position: relative;
+		padding: 5px;
+		overflow: hidden;
+		border-radius: 10px;
+
+	}
+	.input_group{
+	margin-top:15px;
+	position: absolute;
+	width: 230px;
+	
+	}
+	.input_group input[type="text"],input[type="password"],input[type="email"]{
+		width: 100%;
+		border:none;
+		outline: none;
+		background:transparent;
+		height: 40px;
+		display:block;
+		border-bottom: 1px solid #657104;
+		
+	}
+	.input_group input[type="checkbox"]{
+		margin:20px 10px 0 20px;
+	}
+	.input_group button[type="submit"]{
+		width: 85%;
+		padding: 10px 30px;
+		cursor: pointer;
+		border:0;
+		outline: none;
+		display: block;
+		background: linear-gradient(to right,#ff105f,#ffad0f);
+		border-radius: 30px;
+		margin-left: 39px;
+
+	}
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.form_box{
+		width: 380px;
+		height: 450px;
+		background-color:#ddd;
+		transform: translate(50% , 35%);
+		position: relative;
+		padding: 5px;
+		overflow: hidden;
+		border-radius: 10px;
+
+	}.input_group{
+	margin-top: 40px;
+	position: absolute;
+	width: 280px;
+	
+	}.input_group input[type="text"],input[type="password"],input[type="email"]{
+		width: 100%;
+		border:none;
+		outline: none;
+		background:transparent;
+		height: 40px;
+		display:block;
+		border-bottom: 1px solid #657104;
+		margin-left:40px;
+	
+	}
+	.input_group input[type="checkbox"]{
+		margin:20px 10px 0 40px;
+	}
+	.input_group button[type="submit"]{
+		width: 85%;
+		padding: 10px 30px;
+		cursor: pointer;
+		border:0;
+		outline: none;
+		display: block;
+		background: linear-gradient(to right,#ff105f,#ffad0f);
+		border-radius: 30px;
+		margin-left: 70px;
+
+	}
+	
+}
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	
+	
+}
